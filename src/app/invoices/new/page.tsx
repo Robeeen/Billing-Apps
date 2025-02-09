@@ -1,5 +1,3 @@
-"use client"
-
 import Image from "next/image";
 import Link from "next/Link";
 import { Button } from "@/components/ui/button";
@@ -15,7 +13,12 @@ import { db } from '@/db';
 import { Badge } from "@/components/ui/Badge";
 import { CirclePlus } from 'lucide-react';
 
-export default function Home() {
+export default async function Home() {
+  //database connection
+
+  const results = await db.execute(sql `SELECT current_database()`)
+  console.log('results', results);
+
   return (
     <main className="flex flex-col justify-center h-full mt-20 text-left gap-6 max-w-5xl mx-auto my-12">
       <div className="flex justify-between">
