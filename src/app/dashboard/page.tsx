@@ -11,6 +11,7 @@ import {
   TableRow,
 } from "@/components/ui/table";
 import { Badge } from "@/components/ui/Badge";
+import { CirclePlus } from 'lucide-react';
 
 export default function Home() {
   return (
@@ -18,7 +19,11 @@ export default function Home() {
       <div className="flex justify-between">
         <h1 className="text-2xl font-semibold">Invoice Apps</h1>
         <p>
-          <Button variant="ghost">create invoice</Button>
+          <Button variant="ghost" asChild>
+            <Link href="/invoices/new">
+              <CirclePlus /> invoice
+            </Link>
+            </Button>
         </p>
       </div>
 
