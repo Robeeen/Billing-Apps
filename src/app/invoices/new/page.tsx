@@ -16,7 +16,7 @@ import { CirclePlus } from 'lucide-react';
 export default async function Home() {
   //database connection
 
-  const results = await db.execute(sql `SELECT current_database()`)
+  const results = db.execute(sql`SELECT current_database()`)
   console.log('results', results);
 
   return (

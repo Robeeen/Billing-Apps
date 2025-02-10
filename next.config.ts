@@ -5,3 +5,10 @@ const nextConfig: NextConfig = {
 };
 
 export default nextConfig;
+
+//Shams added
+module.exports = {
+  serverRuntimeConfig: {
+    databaseUrl: process.env.XATA_DATABASE_URL,
+  },
+};
